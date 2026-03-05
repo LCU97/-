@@ -24,11 +24,6 @@
 
 </details>
 
-
-- Unreal Engine 기반의 XR 콘텐츠 프레임워크 설계
-- OSC 통신 기반 센서 데이터 처리 시스템 구현
-- Persistant Level 기능으로 레벨 전환 및 Spout 로 타 프로그램과 렌더 타겟 공유
-
 ### Architecture & Design
 
 시스템 설계의 목적은 아래와 같습니다. 
@@ -43,3 +38,27 @@
 <img width="1150" height="912" alt="image" src="https://github.com/user-attachments/assets/9ae7a7ad-7aef-4bc5-8041-31ce6765c7ff" />  
 </details>
 
+<details>
+  <summary><strong> 📝 Framework</strong></summary>
+  <br>
+  
+1. 개발 효율성
+   - 핵심 : 개발 팀원은 DataTable, BoardManager, BoardRule, PlayerActor 의 작동 방식만 이해하면 즉시 서브 레벨 개발에 투입
+   - 효과 : 시스템 복잡도를 낮추어 개발 팀원의 온보딩 시간 단축
+
+2. 확장성
+   - 핵심 : DataTable 을 활용한 콘텐츠 확장에 용이한 구조 채택
+   - 효과 : 코드 수정 없이 데이터 테이블 편집으로 새로운 오브젝트 추가 가능
+
+3. 안정성
+   - 핵심 : CreateObjPoints 내 오브젝트 풀링 구현
+   - 효과 : 실시간 센서 인터렉션 시 빈번한 Actor 생성/파괴로 인한 오버헤드 방지
+
+4. 객체지향 설계
+   - 핵심 : BoardRule 추상 클래스로 설계 및 BoardManager 분리
+   - 효과 : 다형성 - LevelManager 는 공통 메서드만 호출하여 각 룰을 독립적으로 실행
+   - 캡슐화 - BoardManager과 BoardRule을 역할을 분리하여 서브 레벨과 Root 레벨 간의 의존성 최소화
+    
+<img width="2461" height="1381" alt="ClassDiagramSportrack drawio (1)" src="https://github.com/user-attachments/assets/c6bc3320-20c0-4107-9bf5-f85c69f96941" />
+
+</details>
