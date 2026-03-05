@@ -63,7 +63,11 @@
    - 설계의도 : BoardRule 추상 클래스로 설계 및 BoardManager 분리
    - 효과 : 다형성 - LevelManager 는 공통 메서드만 호출하여 각 룰을 독립적으로 실행
    - 캡슐화 - BoardManager과 BoardRule을 역할을 분리하여 서브 레벨과 Root 레벨 간의 의존성 최소화
+  
+<br>
+
     
-<img width="2461" height="1381" alt="ClassDiagramSportrack drawio (1)" src="https://github.com/user-attachments/assets/c6bc3320-20c0-4107-9bf5-f85c69f96941" />
+<img width="2021" height="1331" alt="ClassDiagramSportrack3차최종 drawio" src="https://github.com/user-attachments/assets/e70b6136-3d2d-4a98-9cd3-4ae7c0233b08" />
+
 
 </details>
