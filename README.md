@@ -5,7 +5,7 @@
 - 블로그 : https://saparation.tistory.com/
 
 ---
-## 📑 ProJects
+## 📑 Projects
 ### 1. XR Interactive Content Framework
 
 실감형 체험존의 벽과 바닥 전체에 프로젝션 매핑을 적용하고, 사용자 인터랙션이 가능한 XR 콘텐츠 개발
@@ -38,7 +38,8 @@
 3. 여러 프로젝트에서 공통적으로 사용되는 OSC 및 Spout 기능을 Unreal Plugin 형태로 개발하여 모듈화
 
 <details>
-  <summary><h3>🏗️ System Architecture</h3></summary>
+  <summary><strong> 🏗️ System Architecture</strong></summary>
+  <br>
 <img width="1150" height="912" alt="image" src="https://github.com/user-attachments/assets/9ae7a7ad-7aef-4bc5-8041-31ce6765c7ff" />  
 </details>
 
