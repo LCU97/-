@@ -71,3 +71,26 @@
 
 
 </details>
+
+<details>
+<summary><strong> 🚧 Sequence Diagram & Troubleshooting </strong></summary>
+
+<br>
+
+**1. 레벨 스위칭 시퀀스**
+   
+     
+<img width="661" height="481" alt="레벨스위칭시퀀스 drawio (2)" src="https://github.com/user-attachments/assets/7a2de6df-4890-4564-893d-d7387e4fa642" />
+
+## Issue #1
+
+GPU Crash during Level Streaming
+- 원인 : 레벨 전환 시 이전 레벨의 텍스처가 전부 해제 되지 않고 새로운 레벨의 텍스처가 로드되면서 VRAM 사용량 급격히 증가.
+     
+- 문제 분석 : memreport 분석 결과, 일부 서브 레벨의 텍스처가 NPOT(Non Power Of Two) 형태로 제작되어 MipMap이 생성되지 않아 텍스처 스트리밍이 정상적으로 동작하지 않고 VRAM 사용량이 비정상적으로 증가하는 문제 확인
+     
+- 해결 과정 : 그래픽 디자이너 팀과 협업하여 해당 텍스처들을 POT(Power Of Two) 형태로 재제작하고 압축 설정 및 텍스처 그룹을 UIInterface → World 로 변경하여 스트리밍 가능하도록 수정
+     
+- 결과 : 레벨 전환 시 VRAM 사용량을 약 15GB → 8GB 수준으로 감소
+  
+</details>
