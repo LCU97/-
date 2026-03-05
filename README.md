@@ -43,19 +43,24 @@
   <br>
   
 1. 개발 효율성
-   - 핵심 : 개발 팀원은 DataTable, BoardManager, BoardRule, PlayerActor 의 작동 방식만 이해하면 즉시 서브 레벨 개발에 투입
-   - 효과 : 시스템 복잡도를 낮추어 개발 팀원의 온보딩 시간 단축
+   - **온보딩 단순화**
+     - 설계 의도 : 개발 팀원은 DataTable, BoardManager, BoardRule, PlayerActor의 작동 방식만 이해하면 즉시 서브 레벨 개발에 투입 가능
+     - 효과 : 시스템 복잡도를 낮추어 개발 팀원의 온보딩 시간 단축
+
+   - **공통 기능 모듈화**
+     - 설계 의도 : 여러 프로젝트에서 공통적으로 사용되는 기능을 플러그인 형태로 분리하여 모듈화
+     - 효과 : 다른 프로젝트에서도 별도의 구현 없이 OSC 및 Spout 기능을 즉시 사용할 수 있도록 재사용성 확보
 
 2. 확장성
-   - 핵심 : DataTable 을 활용한 콘텐츠 확장에 용이한 구조 채택
+   - 설계의도 : DataTable 을 활용한 콘텐츠 확장에 용이한 구조 채택
    - 효과 : 코드 수정 없이 데이터 테이블 편집으로 새로운 오브젝트 추가 가능
 
 3. 안정성
-   - 핵심 : CreateObjPoints 내 오브젝트 풀링 구현
+   - 설계의도 : CreateObjPoints 내 오브젝트 풀링 구현
    - 효과 : 실시간 센서 인터렉션 시 빈번한 Actor 생성/파괴로 인한 오버헤드 방지
 
 4. 객체지향 설계
-   - 핵심 : BoardRule 추상 클래스로 설계 및 BoardManager 분리
+   - 설계의도 : BoardRule 추상 클래스로 설계 및 BoardManager 분리
    - 효과 : 다형성 - LevelManager 는 공통 메서드만 호출하여 각 룰을 독립적으로 실행
    - 캡슐화 - BoardManager과 BoardRule을 역할을 분리하여 서브 레벨과 Root 레벨 간의 의존성 최소화
     
