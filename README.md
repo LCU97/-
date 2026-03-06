@@ -92,5 +92,36 @@ GPU Crash during Level Streaming
 - 해결 과정 : 그래픽 디자이너 팀과 협업하여 해당 텍스처들을 POT(Power Of Two) 형태로 재제작하고 압축 설정 및 텍스처 그룹을 UIInterface → World 로 변경하여 스트리밍 가능하도록 수정
      
 - 결과 : 레벨 전환 시 VRAM 사용량을 약 15GB → 8GB 수준으로 감소
-  
+
+
+## Issue #2
+
+XR Room 멀티 카메라 스티칭 시 화면 경계 불일치 문제
+- 원인 : 실제 XR 체험 공간의 6면(앞/뒤/좌/우/위/아래)을 렌더링하기 위해 6개의 SceneCapture2D 카메라와 고해상도 Render Target을 사용하였는데, 해상도가 매우 커 카메라의 각 면의 화면을 정확히 스티칭하기 어려운 문제가 발생
+
+- 문제 분석 :
+  - Render Target 해상도가 크기 때문에 캡처 영역을 확보하기 위해 카메라를 뒤로 이동시키는 방식 사용 <br>
+     → 이 과정에서 바닥을 캡처하는 카메라가 천장보다 높은 위치로 이동하여 천장의 뒷면(Backface)을 캡처하는 문제 발생
+     
+  - FOV 및 Transform을 조정하여 스티칭을 시도했으나 6면 중 5면은 정렬이 가능했지만 마지막 한 면의 화면 경계를 정확히 맞추지 못함 <br>
+     → 카메라 Transform 및 FOV 기반 조정만으로는 정확한 스티칭 정렬에 한계 존재
+
+<img width="1131" height="742" alt="카메라" src="https://github.com/user-attachments/assets/317d73a4-62ed-4068-a4e7-2ef4d7eb35c2" />
+
+### - 해결 과정1 : Projection Matrix 기반 렌더링 범위 제어
+ | <strong>SceneCapture2D 카메라의 Projection Matrix를 직접 생성하여 렌더링 범위를 제어하도록 구현 </strong> <br>
+  → Custom Near / Far 값을 적용하여 카메라에 지나치게 가깝거나 먼 오브젝트를 렌더링 대상에서 제외하도록 처리 <br>
+  → 카메라 위치를 과도하게 이동시키지 않고 필요한 영역만 정확히 캡처할 수 있도록 렌더링 범위를 제어
+
+### - 결과1 :
+  - 뒷면을 캡쳐하는 문제 해결 O
+  - 6면 경계 일치 문제 해결 실패 X
+
+### - 해결 과정2 : 디자인 팀에서 사용하는 레벨 디자인 프리뷰 용 시네마틱 카메라들의 데이터를 활용하여 렌더링 범위 제어
+  → 프리뷰 레벨에서 사용되는 시네마틱 카메라의 속성 중 SensorWidth, SensorHeight, FocalLength 등의 데이터를 복사해서 SceneCapture 카메라의 새 Projection Matrix를 만드는데 사용 및 적용
+
+### - 결과2 :
+  - 뒷면을 캡쳐하는 문제 해결 O
+  - 6면 경계 일치 문제 해결 O
+
 </details>
