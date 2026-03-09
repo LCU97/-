@@ -178,5 +178,5 @@ XR Room 멀티 카메라 스티칭 시 화면 경계 불일치 문제
 - 현장 설치 및 메뉴얼 작성
 
 <br>
- 관련 영상 : [https://www.youtube.com/watch?v=yDWWOSF2NIc](https://www.youtube.com/watch?v=yDWWOSF2NIc)
- 관련 기사 : [(https://www.gamemeca.com/view.php?gid=1768767)](https://www.gamemeca.com/view.php?gid=1768767)
+ 관련 영상 : https://www.youtube.com/watch?v=yDWWOSF2NIc <br>
+ 관련 기사 : https://www.gamemeca.com/view.php?gid=1768767 <br>
