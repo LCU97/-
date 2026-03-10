@@ -135,7 +135,7 @@ XR Room 멀티 카메라 스티칭 시 화면 경계 불일치 문제
 
 ---
 
-### 2. H.W.H
+## 2. H.W.H
 
 | Unreal Engine (Blueprints / C++) 기반으로 개발한 **Action RPG 게임** <br>
 | 개발 기간 : 2024.09.16 ~ 2024.10.07 <br>
@@ -156,7 +156,7 @@ XR Room 멀티 카메라 스티칭 시 화면 경계 불일치 문제
 
 ---
 
-### 3. Let's Go Maple
+## 3. Let's Go Maple
 
 | 메이플스토리 IP 를 이용하여 대전어린이병원의 환아들을 위한 femto bolt 모션 인신 센서 기반 실시간 인터렉티브 게임 개발 및 설치
 | 개발 기간 : 2025.09. ~ 2025.11
@@ -184,11 +184,10 @@ XR Room 멀티 카메라 스티칭 시 화면 경계 불일치 문제
 
  ---
 
- ### 4. Pollute
+ ## 4. Pollute
 
  | Unreal Engine (Blueprints / C++) 를 사용하여 리슨 서버 기반의 비대칭 서바이벌 게임 개발 <br>
  | 개발 기간 : 2024.11.15 ~ 2024.12.16 <br>
-
 
  🔗 **Repository**  
  [GitHub_Link](https://github.com/zerohn/Pollute)
@@ -196,9 +195,40 @@ XR Room 멀티 카메라 스티칭 시 화면 경계 불일치 문제
 <br>
 
 **담당 역할**
-- 
+- Unreal Engine의 Listen Server 구조를 활용하여 클라이언트-서버 간 액터 리플리케이션 및 RPC 기반의 멀티플레이 시스템
 
  <br>
+
+관련 영상 : https://youtu.be/w0YqDRbhcMw <br>
+
+---
+
+## 5. Issac 3D 모작
+
+| Unreal Engine (Blueprints / C++) 기반으로 개발한 아이작 3D 모작 게임
+
+**담당 역할**
+- 공통 기능을 가진 `Enemy / EnemyBullet` 클래스를 기반으로 상속 구조를 설계하고 virtual 함수를 활용하여 몬스터 및 탄환의 행동 로직을 각 클래스에서 `Override`
+- 상점 및 플레이어 저장 시스템 구현
+  
+<br>
+
+**코드 보러가기** <br>
+[GitHub_코드](https://github.com/petemus/ISAAC3D/tree/master/Source/ShootingGame3D/Enemy)
+
+<br>
+
+**관련 영상** : https://www.youtube.com/watch?v=FqUksbYmu30 <br>
+
+<br>
+
+**블로그 개발 정리**
+- 보스 몬스터 : [보러가기](https://saparation.tistory.com/213)
+- 상점 및 플레이어 저장 : [보러가기](https://saparation.tistory.com/180)
+
+<br>
+
+
 
 
  
