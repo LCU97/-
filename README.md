@@ -34,7 +34,7 @@
 시스템 설계의 목적 
 
 1. 개발팀원들이 프로젝트의 주요 시스템에 대한 최소한의 이해만으로도 콘텐츠 개발이 가능하도록 설계
-2. 모든 체험형 레벨에서 동일한 개발 방식을 적용하여 팀원 간 유지보수와 테스트, 협업이 용이하도록 설계
+2. 모든 체험형 레벨에 일관된 아키텍처와 개발 패턴을 적용하여 코드 일관성과 유지보수성, 협업 생산성을 개선
 3. 여러 프로젝트에서 공통적으로 사용되는 OSC 및 Spout 기능을 Unreal Plugin 형태로 개발하여 모듈화
 
 <details>
@@ -197,13 +197,51 @@ XR Room 멀티 카메라 스티칭 시 화면 경계 불일치 문제
 
 <br>
 
+**담당 역할**
+- Unreal Engine의 Listen Server 구조를 활용하여 클라이언트-서버 간 액터 리플리케이션 및 RPC 기반의 멀티플레이 시스템
+
+<br>
+
+<details>
+<summary>프로젝트 목표 및 주요 기능</summary>
+
+## 📖 프로젝트 목표
+- 언리얼 엔진 표준 네트워킹 프레임워크 기반의 Listen Server 환경 구축 및 권한(Authority) 검증을 통한 실시간 멀티플레이어 동기화 로직 구현 <br>
+  (Possess/UnPossess 메커니즘 기반의 캐릭터 전환 및 행동 동기화 구현, GameState를 활용한 전역 게임 상태 관리 및 액터 리플리케이션 최적화)
+  
+<br>
+
+## 🧠 주요 기능
+
+### 📄 PlayerController 에 Possess 변경 및 네트워크 동기화 로직
+
+다양한 플레이어 클래스(인간, 괴물, 관전자 등) 간 동적 빙의(Possess) 시스템 구현 및 네트워크 동기화 처리
+[코드 보러가기](https://github.com/zerohn/Pollute/blob/9b0047d445a551795e3335d7c0ffcfe6a07fdb52/Source/Pollute/Private/LCU/Player/LCU_PlayerController.cpp#L65)
+
+<br>
+
+### 📄 서버에서 저주 객체를 클라이언트에 동기화
+
+- GameState : 이벤트 객체를 특정 클라이언트에 할당 후 저장 [코드 보러가기](https://github.com/zerohn/Pollute/blob/9b0047d445a551795e3335d7c0ffcfe6a07fdb52/Source/Pollute/Private/P_Settings/P_GameState.cpp#L102)
+- ALCU_Curse 액터 : ClientRPC를 활용한 특정 대상 상태 이상 카운트다운 동기화 및 UI 피드백 구현 [코드 보러가기](https://github.com/zerohn/Pollute/blob/9b0047d445a551795e3335d7c0ffcfe6a07fdb52/Source/Pollute/Private/LCU/InteractActors/LCU_Curse.cpp#L56) 
+- PlayerCharacter 들의 행동 로직 동기화 [코드 보러가기](https://github.com/zerohn/Pollute/blob/master/Source/Pollute/Private/LCU/Player/LCU_MonsterCharacter.cpp)
+
+## 🎉 성과
+- 언리얼 네트워크 프레임워크의 핵심인 리플리케이션과 RPC 메커니즘을 이해
+- 멀티플레이 환경에서의 캐릭터 액션 동기화 및 서버 권한 검증 로직을 성공적으로 구축
+
+<br>
+
+<br>
+
+</details>
+
+ <br>
+
  🔗 **Repository**  
  [GitHub_Link](https://github.com/zerohn/Pollute)
 
 <br>
-
-**담당 역할**
-- Unreal Engine의 Listen Server 구조를 활용하여 클라이언트-서버 간 액터 리플리케이션 및 RPC 기반의 멀티플레이 시스템
 
  <br>
 
