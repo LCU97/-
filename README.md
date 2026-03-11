@@ -8,7 +8,7 @@
 ## 📑 Projects
 ### 1. XR Interactive Content Framework (사내 프로젝트)
 
-실감형 체험존의 벽과 바닥 전체에 프로젝션 매핑을 적용하고, 사용자 인터랙션이 가능한 XR 콘텐츠 개발
+실감형 체험존의 벽과 바닥 전체에 프로젝션 매핑을 적용하고, 사용자 인터랙션이 가능한 XR 콘텐츠 개발 및 현장 설치
 
 <img width="610" height="457" alt="image" src="https://github.com/user-attachments/assets/ddb3bae8-570c-42cc-93d4-5151d2a91d0a" />
 
@@ -161,15 +161,12 @@ XR Room 멀티 카메라 스티칭 시 화면 경계 불일치 문제
 | 메이플스토리 IP 를 이용하여 대전어린이병원의 환아들을 위한 femto bolt 모션 인신 센서 기반 실시간 인터렉티브 게임 개발 및 설치 <br>
 | 개발 기간 : 2025.09. ~ 2025.11 <br>
 | 유지/보수 기간 : 2025.12 ~ 2026.03 <br>
+| 주관 : Nca  <br>
+| 협력 : 넥슨 재단, 대전세종충남넥슨후원공공어린이재활병원
 
 <img width="860" height="282" alt="image" src="https://github.com/user-attachments/assets/3f71af08-2bb2-42da-a7ed-b6ad436a961d" />
 
 <br>
-
-<br>
-
-# 리포지토리 넣으면 큰일날듯 대신 몇몇 코드만 캡쳐해서 올리는 것으로 대체할것. 토글 형식으로 내용물을 안쪽에 정리할것. 굳이 플머 관련 내용만 넣지 말고 다른 담당 역할 관련 내용도 추가 할 것
-
 
 <br>
 
@@ -178,6 +175,60 @@ XR Room 멀티 카메라 스티칭 시 화면 경계 불일치 문제
 - Google Sheets API 기반 게임 이용자 수 집계 및 모니터링 기능 구현
 - 디자인 팀, 넥슨, 병원 관계자 일정 조율 및 개발팀 업무 및 일정 관리
 - 현장 설치 및 메뉴얼 작성
+
+<br>
+
+<details>  
+<summary>프로젝트 목표 및 주요 기능</summary>
+
+## 프로젝트 목표
+- 대전어린이병원 환아 대상 **인터랙티브 게임 콘텐츠 개발 및 체험 부스 설치·운영**
+- **Femto Bolt 모션 인식 기반** 미니게임 3종 구현 (플레이 타임 약 3분)
+- 메이플스토리 IP 활용 **BPM 기반 노트 생성 리듬 게임 시스템 개발**
+- **Google Sheets 연동**을 통한 콘텐츠 이용자 수 수집 및 유지보수 지원 (2026.03까지)
+
+## 🧠 주요 수행 업무 
+
+<br>
+
+### 📄 게임 선택 레벨 및 이동 구현
+
+___
+
+
+<p align="center">
+<img width="1427" height="810" alt="image" src="https://github.com/user-attachments/assets/f4e78510-34fd-4bdc-a621-4949cf419f26" />
+</p>
+
+<p align="center">
+  <em> 게임 선택 레벨 Widget</em>
+</p>
+
+<br>
+
+<p align="center">
+<img width="361" height="178" alt="image" src="https://github.com/user-attachments/assets/ed9c0268-aa37-4b65-91e0-d9c0469a5180" />
+</p>
+
+- UMG 기반 재사용 가능한 UI 위젯 구조 설계 및 구현
+
+<br>
+
+<br>
+
+<img width="1339" height="738" alt="image" src="https://github.com/user-attachments/assets/4a522aa0-e5d9-42ac-ba57-cf98f4a7fbe7" />
+
+- 모션 트래킹 손 좌표와 UI 버튼 영역의 **AABB 충돌 판정**을 통해 마우스 없이 UI 선택이 가능한 인터랙션 시스템 구현 (2인 동시 입력 지원) <br>
+
+
+
+  
+
+<br>
+
+
+
+</details>
 
 <br>
 
