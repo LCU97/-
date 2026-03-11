@@ -187,13 +187,51 @@ XR Room 멀티 카메라 스티칭 시 화면 경계 불일치 문제
 - 메이플스토리 IP 활용 **BPM 기반 노트 생성 리듬 게임 시스템 개발**
 - **Google Sheets 연동**을 통한 콘텐츠 이용자 수 수집 및 유지보수 지원 (2026.03까지)
 
+<br>
+
 ## 🧠 주요 수행 업무 
 
 <br>
 
-### 📄 게임 선택 레벨 및 이동 구현
+<details>  
+<summary>📄 기획안 및 순서도 작성</summary>
 
-___
+<br>
+
+<p align="center">
+<img width="1176" height="1338" alt="image" src="https://github.com/user-attachments/assets/047869d9-253e-444c-880e-f037afdeef58" />
+</p>
+
+<p align="center">
+  <em> 순서도</em>
+</p>
+
+
+- 디자인팀과의 원활한 소통과 협업을 위해 게임 진행 방식을 시각화하고 구조화하여 프로젝트를 진행
+
+<br>
+
+<p align="center">
+  <img width="2923" height="706" alt="image" src="https://github.com/user-attachments/assets/c4aa70c9-aa04-4d1d-873e-a0ae7b707f45" />
+</p>
+
+<p align="center">
+  <em> 미팅 기획서 일부</em>
+</p>
+
+- 넥슨 및 병원 관계자와의 기획 미팅을 통해 요구사항을 반영하여 게임 기획 개선
+
+<br>
+
+---
+
+</details>  
+
+
+
+<br>
+
+### 📄 게임 선택 레벨 및 이동 구현
 
 
 <p align="center">
@@ -210,6 +248,7 @@ ___
 <img width="361" height="178" alt="image" src="https://github.com/user-attachments/assets/ed9c0268-aa37-4b65-91e0-d9c0469a5180" />
 </p>
 
+
 - UMG 기반 재사용 가능한 UI 위젯 구조 설계 및 구현
 
 <br>
@@ -218,13 +257,77 @@ ___
 
 <img width="1339" height="738" alt="image" src="https://github.com/user-attachments/assets/4a522aa0-e5d9-42ac-ba57-cf98f4a7fbe7" />
 
-- 모션 트래킹 손 좌표와 UI 버튼 영역의 **AABB 충돌 판정**을 통해 마우스 없이 UI 선택이 가능한 인터랙션 시스템 구현 (2인 동시 입력 지원) <br>
-
-
-
-  
+- 모션 트래킹 손 좌표와 UI 버튼 영역의 **AABB 충돌 판정**을 통해 마우스 없이 UI 선택이 가능한 인터랙션 시스템 구현 (2인 동시 입력 지원)
 
 <br>
+
+<br>
+
+<img width="1014" height="1056" alt="image" src="https://github.com/user-attachments/assets/e23e1a43-b84d-4081-a59e-2ab66f571b76" />
+
+- **HTTP 기반 Google Sheets 연동 시스템**을 구현하여 콘텐츠 이용자 수 통계 수집 기능 개발
+
+<br>
+
+---
+
+<br>
+
+### 📄 IP 감수 요청서 작성 및 하드웨어 예산 조율
+<p align="center">
+<img width="1172" height="331" alt="image" src="https://github.com/user-attachments/assets/ad9e41f0-ace0-4d75-8aa4-d14b3f5322af" />
+</p>
+
+<p align="center">
+  <em> 예산안 일부 발췌</em>
+</p>
+
+- 넥슨 재단에 메이플스토리 IP 리소스 검수 요청 및 NCA와 하드웨어 예산안 협의
+
+<br>
+
+---
+
+<br>
+
+### 📄 병원 현장 및 부스 설치, 운영
+
+<br>
+
+![KakaoTalk_20260310_213234360_02](https://github.com/user-attachments/assets/c27ea2a8-3191-4e95-88a8-6c72cd07f148)
+
+- 코엑스 쇼케이스 현장 부스 설치 및 운영
+
+
+<br>
+
+![KakaoTalk_20260310_213241453](https://github.com/user-attachments/assets/c614d29f-27c7-4639-8526-2e86c0e4e356)
+
+- 병원 부스 설치
+
+<br>
+
+
+
+</details>
+
+<br>
+
+<details>
+<summary>🎉 성과</summary>
+
+| 항목 | 내용 |
+|---|---|
+| 인터랙션 시스템 | 모션 센서 기반 손 좌표를 활용한 UI 선택 시스템 구현 |
+| 기획 및 운영 지원 | 예산안, 흐름도 작성.  미팅, 현장 작업 및 운영 메뉴얼 |
+| 운영 시스템 | Google Sheets 연동을 통한 콘텐츠 이용자 통계 수집 시스템 구축 |
+| 멀티플레이 | 2인 동시 플레이 인터랙션 처리 시스템 구현 |
+
+<br>
+
+![KakaoTalk_20260310_213509635](https://github.com/user-attachments/assets/23466d19-bff3-45f1-b6e7-cf9c3ed067a4)
+
+- NCA 단기과정 우수상 수상
 
 
 
